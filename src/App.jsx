@@ -8,6 +8,10 @@ function App() {
       AnnInvestments : 12000,
       returnInv : 7,
       yearInv :38
+initialInvestment,
+        annualInvestment,
+        expectedReturn,
+        duration
   
     })
     function callUserInput(inputIde, val){
