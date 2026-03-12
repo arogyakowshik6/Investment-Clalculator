@@ -1,6 +1,6 @@
 import jsPDF from 'jspdf';
 
-export function generatepdf(data){
+export function generatePDF(data){
     const doc = new jsPDF();
 
     doc.setFontSize(20);

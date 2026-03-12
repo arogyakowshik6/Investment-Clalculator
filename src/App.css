@@ -51,16 +51,18 @@ table {
   width: 100%;
   border-collapse: collapse;
   margin-top: 2rem;
+  border-radius: 10px;
 }
 
 th, td {
-  border: 1px solid #ddd;
+  border: 1px solid #726060;
   padding: 8px;
-  text-align: right;
+  text-align: center;
+  border-radius: 5px;
 }
 
 th {
-  background-color: #f2f2f2;
+  background-color: #514444;
   font-weight: bold;
 }
 

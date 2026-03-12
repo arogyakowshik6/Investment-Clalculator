@@ -3,7 +3,7 @@ import React , {useState}from 'react'
 import '../App.css'
 
 
-export const UserInput = ({inputCust,OnChangeCustInput}) => {
+export const UserInput = ({inputCust,onChangeCustInput}) => {
  
   
   return(
@@ -12,23 +12,22 @@ export const UserInput = ({inputCust,OnChangeCustInput}) => {
         <p>
           <label>Beginning Investments</label>
 
-          <input Type = "number" value ={inputCust.BegInvestments}required onChange = {(e)=> OnChangeCustInput('BegInvestemnt'.e.target.value)}/>
+          <input type = "number" value ={inputCust.initialInvestment}required onChange = {(e)=> onChangeCustInput('initialInvestment',e.target.value)}/>
         </p>
         <p>
           <label>Annual Investment </label>
-          <input Type = "number" value = {inputCust.AnnInvestments}required onChnage = {(e)=> OnChangeCustInput('AnnInvestments'.e.target.value)}/>
+          <input type = "number" value = {inputCust.annualInvestment}required onChange = {(e)=> onChangeCustInput('annualInvestment',e.target.value)}/>
         </p>
         <p>
           <label>Return expected</label>
-          <input Type = "number" value = {inputCust.returnInv}required onChange = {(e)=> OnChangeCustInput ('returnInv'.e.target.value)}/>
+          <input type = "number" value = {inputCust.expectedReturn}required onChange = {(e)=> onChangeCustInput ('expectedReturn',e.target.value)}/>
         </p>
         <p>
           <label>Yearly Investment</label>
-          <input Type = "number"value = {inputCust.yearInv} required onChange = {(e)=> OnChangeCustInput ('yearInv'.e.target.value)}/>
+          <input type = "number"value = {inputCust.duration} required onChange = {(e)=> onChangeCustInput ('duration',e.target.value)}/>
         </p>
       </div>
 
-      <button >Reset values</button>
         
     </section>
   ) 
