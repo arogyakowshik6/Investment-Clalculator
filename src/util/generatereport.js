@@ -14,7 +14,9 @@ export function generatePDF(data){
     let yOffset = 80;
     const linespacing = 10;
     const pageHeight = doc.internal.pageSize.height
-    data.results.forEach((result) =>{
+   if (data) {
+    console.log(data)
+     data.result.forEach((result) =>{
         if (yOffset+50 > pageHeight){
             doc.addPage();
             yOffset = 20;
@@ -22,10 +24,11 @@ export function generatePDF(data){
         doc.text(`Year: ${result.year}`, 10, yOffset)
         doc.text(`Interest (Year): ${result.interest.toFixed(2)}`,10, (yOffset+linespacing))
         doc.text(`Interest (Total): ${result.totalInterest.toFixed(2)}`,10, (yOffset+2*linespacing))
-        doc.text(`Invested Capital: ${result.investedCap.toFixed(2)}`,10, (yOffset+3*linespacing))
+        doc.text(`Investement Capital: ${result.investedCapital.toFixed(2)}`,10, (yOffset+3*linespacing))
         doc.text(`Total Investment Value: ${result.investmentValue.toFixed(2)}`,10, (yOffset+4*linespacing))
 
         yOffset+=60;
     })
     doc.save('Investment Report.pdf')
+   }
 }
